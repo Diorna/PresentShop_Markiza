@@ -1,0 +1,109 @@
+#body_page{
+    width:70%;
+    margin: 220px  16% 15px; 
+    /*border: 1px solid red;*/
+    height: 100%;
+}
+.catalog div{
+    display: inline-block;
+    vertical-align: top;
+}
+.one_tovar{
+    margin: 20px;
+    width: 28%;
+}
+.one_tovar>pre {
+    font-size: 18pt;
+    margin: 5px 25px;
+    display: inline-block;
+    font-family: Didact Gothic, sans-serif;
+}
+.one_tovar>img{
+    width: 90%;
+    height: 100%;
+    margin: 0 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.price{
+    color: #d40a43;
+    float: right;
+}
+.link_infoAboutProduct, .link_BuyProduct{
+    margin: -8px 35px;
+    padding: 5px;
+    font-weight: 800;
+    border: 1px solid #ecccf5;
+    border-radius: 5px;
+    font-size: 14pt;
+}
+.link_infoAboutProduct:active, .link_BuyProduct:active{
+    border-width: 2px;
+}
+.link_infoAboutProduct{
+    float: left;
+    background-color: rgba(240, 214, 221, 0.2);
+    
+    /*border: 1px solid red; */
+}
+.link_BuyProduct{
+    float: right;
+    background-color: rgba(240, 214, 221, 0.2);
+    border: 1px solid #ecccf5;
+}
+.descriptionProduct div{
+    display: inline-block;
+    vertical-align: top;
+    width: 35%;
+    padding: 5px;
+}
+.descriptionProduct p, pre, span {
+    color: #45248a;
+    float: left;
+}
+.description h2{
+    font-size: 18pt;
+    color: #45248a;
+}
+.description div{
+    display: inline-block;
+    float: left;
+}
+.description div>lable,div>input{
+    color: #45248a;
+    font-size: 12pt;
+}
+.description>p {
+    margin: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #d4cbe8;
+    border-top: 1px solid #d4cbe8;
+}
+.description>.cost {
+    padding: 0;
+    color: #45248a;
+    font-family: Didact Gothic, sans-serif;
+}
+.cost td{
+    padding: 0 5px;
+}
+.descriptionProduct div:first-child{
+    width: 50%;
+}
+.descriptionProduct div:first-child>img{
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+#countProduct{
+    width: 20px;
+}
+.descriptionProduct .link_BuyProduct{
+    margin: 0;
+}
+.to_add{
+    width: auto;
+    height: auto;
+    margin: 150px 0;
+    padding: 150px;
+    background-color: cornsilk;
+    text-align: center;
+    font-size: 18pt;
+}

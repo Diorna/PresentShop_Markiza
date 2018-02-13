@@ -1,0 +1,226 @@
+.content_main {
+    /*border: 1px solid red;*/
+    margin-top: 165px;
+}
+.content_main * {
+    /*border: 1px solid red;*/
+    }
+/*Нижняя часть главной страницы*/
+#main_part{
+    height: 800px;
+    background-color: antiquewhite;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+h1{
+    font-weight: bold;
+    font-size: 22pt;
+    width: 90%;
+    font-size: 22pt;
+    color: #565656;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 5%;
+}
+.services_offer{
+    text-align:  center;
+    padding: 1%;
+}
+.offer{
+    display: inline-block;
+    width: 23%;
+    margin: 5px;
+    color: #565656;
+    vertical-align: top;
+    text-shadow: #fff 1px 1px 0, #fff -1px -1px 0, 
+                 #fff -1px 1px 0, #fff 1px -1px 0;
+    color: #e50a32;
+    
+}
+
+.offer>img{
+    background-color: rgba(251,225,200, 0.6); 
+    border-radius: 50%;
+    margin: 20px;
+}
+#vk_groups{
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.map{
+    border:0;
+    margin-bottom: 3px; 
+}
+#workers{
+    width: 100%;
+    font-size: 18pt;
+    color: #565656;
+    text-align: center;
+    padding: 20px 0;
+}
+#workers div{
+    padding: 3%;
+    display: inline-block;
+    width: 20%;
+    margin-top: 20px;
+    background-color: rgba(251,225,200, 0.2);
+    border-radius: 50%;
+}
+#workers img{
+    max-height: 300px;
+    border-radius: 50%;
+}
+
+@media(min-width:800px){
+    input.data{
+        background: #fff;
+        border-radius: 6px;
+        color: #f80015;
+        display: block;
+        font-size: 16pt;
+        padding: 20px 15px;
+        text-align: center;
+        width: 30%;
+        margin: 4% auto 1% 500px;
+    }
+    div#agree{
+        display: block;
+        font-size: 11pt;
+        padding: 0;
+        text-align: center;
+        width:  30%;
+        margin-left: 500px;
+    }
+    .btn_call_me{
+        padding: 7px;
+        font-size:  16pt;
+        margin-left:  720px;
+    }
+    #wait_call{
+        margin-top: 5%;
+        width: 100%;
+    }
+    .offer h2{
+        font-size: 18pt;
+        margin: 10px;
+    }
+    
+    .offer>img{
+        width: 30%;
+    }
+}
+@media(max-width:800px) and (min-width:525px){
+    #workers p,#subscribe{
+        font-size: 14pt;
+    }
+    input.data{
+        color: #e14570;
+        display: block;
+        font-size: 14pt;
+        padding: 15px 10px;
+        text-align: center;
+        width:  95%;
+        margin: 4% auto 1%;
+    }
+    div#agree{
+        display: block;
+        font-size: 11pt;
+        padding: 0;
+        text-align: center;
+        width:  95%;
+    }
+    .btn_call_me{
+        padding: 7px;
+        font-size:  14pt;
+        margin-left:  0px;
+        width: 70%;
+    }
+    #wait_call{
+        margin-top: 5%;
+        width: 100%;
+        text-align: center;
+    }
+    .offer h2{
+        font-size: 14pt;
+        margin: 5px;
+    }
+    .offer>img{
+        width: 70%;
+    }
+}
+@media(max-width:524px){
+    #workers p,#subscribe{
+        font-size: 10pt;
+    }
+    input.data{
+        color: #e14570;
+        display: block;
+        font-size: 14pt;
+        padding: 15px 10px;
+        text-align: center;
+        width:  95%;
+        margin: 3% auto;
+    }
+    div#agree{
+        display: block;
+        font-size: 11pt;
+        padding: 0;
+        text-align: center;
+        width:  95%;
+    }
+    .btn_call_me{
+        padding: 7px;
+        font-size:  14pt;
+        margin-left:  0px;
+        width: 70%;
+    }
+    #wait_call{
+        margin-top: 5%;
+        width: 100%;
+        text-align: center;
+    }
+    .offer h2{
+        font-size: 14pt;
+        margin: 2px;
+    }
+    .offer>img{
+        width: 70%;
+    }
+}
+
+    
+#present{
+    background-image:url(../img/gift.jpg);
+    background-repeat: no-repeat;
+    height: 730px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding-top: 170px;
+}
+#present>h1{
+    margin: 0;
+}
+#present>h1, #present span{
+    padding-top: 30px;
+    text-shadow: #fff 1px 1px 0, #fff -1px -1px 0, 
+                 #fff -1px 1px 0, #fff 1px -1px 0;
+}
+div#gift{
+    padding-top: 10px;
+    /*border: 1px solid red;*/
+}
+input{
+    outline:none;    
+}
+
+.btn_call_me{
+    -moz-border-radius:  5px; /* Firefox */
+    -webkit-border-radius:  5px; /* Safari 4 */
+    border-radius:  5px; /* IE 9, Safari 5, Chrome */
+    background: linear-gradient(#f8ceda, #dd2e5e);
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+    font-family: Didact Gothic;
+}
+
+.btn_call_me:hover { background: linear-gradient(#e36386, #e36387);  }
+.btn_call_me:active { background: linear-gradient(#dd2e5e, #f8ceda); }
