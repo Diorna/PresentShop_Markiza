@@ -18,7 +18,7 @@ abstract class ACore{
 //---------------Метод построения и вывода верхнего меню
     protected function get_top_menu(){
         
-        include "header.tpl";
+        include "temp/header.tpl";
         
         $HTML = "";
                 $query = "SELECT id,name_menu FROM t_menu where (id>=7)";
@@ -97,7 +97,7 @@ abstract class ACore{
                         </div>
                         <div id='hideMenu'>";
         
-        $query = "SELECT * FROM `t_kateg`";
+        $query = "SELECT * FROM `t_categ`";
         $row = $this->item_array($query); //Вызов метода создания массива элементов меню  
         foreach($row as $item){
             //Настройка классов стилей для активных ссылок
@@ -108,7 +108,7 @@ abstract class ACore{
             }
             
             $HTML .= "<a href='?item=category&id_categ=".$item['id']."'class='".$clmenu."menu'>
-            ".$item['kateg']."</a>";
+            ".$item['categ']."</a>";
         }
         $HTML .= "  </div> 
                     <div id='search'>
@@ -119,7 +119,7 @@ abstract class ACore{
                     <div id='mobileMenu'>";
         foreach($row as $item){
             $HTML .= "<a href='?item=category&id_categ=".$item['id']."'class='nmenu'>
-            ".$item['kateg']."</a><br/>";
+            ".$item['categ']."</a><br/>";
         }
         $HTML .= "<hr></div>
                 </div>";
@@ -144,7 +144,7 @@ abstract class ACore{
     protected function get_footer(){
         $query = "SELECT * FROM company";
         $row = $this->item_array($query); //Вызов метода создания массива элементов меню 
-        include 'footer.tpl';
+        include 'temp/footer.tpl';
         
         foreach($row as $item)
         $HTML = "
@@ -164,7 +164,7 @@ abstract class ACore{
                         </a>  
                     </div>
               <div class='rights'>
-                <a href=''> &copy;2015-".date('Y').' '.$item['name_company']."</a>
+                <a href=''> &copy;".date('Y').' '.$item['name_company']."</a>
               </div>
             </footer>
  <!--Скрипт для изменения отображения категорий  на разных экранах-->  
@@ -204,7 +204,7 @@ abstract class ACore{
         
     }
     
-    //Абстрактный метод вывода контента, перегружается во всех дочерних классах
+//----------Абстрактный метод вывода контента, перегружается во всех дочерних классах
     abstract function get_content();
     
 }

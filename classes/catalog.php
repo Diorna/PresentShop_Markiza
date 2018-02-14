@@ -8,7 +8,7 @@ class catalog extends ACore{
       $query = 'Select id, name, image, color, price, date FROM t_catalog ORDER BY date'; 
       $result=mysql_query($query);
         if(!$result){
-            exit(mysql_errno());
+            exit(mysql_error());
         }
       
         

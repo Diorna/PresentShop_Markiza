@@ -1,10 +1,10 @@
 <?
+session_start();
 header("Content-Type:text/html;charset=utf-8");
-
-
 
 require_once('config.php');
 require_once('classes/ACore.php');
+require_once('classes/ACore_admin.php');
 
 //include 'views/header.php';
 //include 'views/footer.php';
