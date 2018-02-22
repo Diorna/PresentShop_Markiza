@@ -71,7 +71,7 @@ abstract class ACore{
                     </div><hr>";
         return ($HTML);
     }
-//------------------Метод построения и вывода шапки сайта на экран
+//------------------Метод построения и вывода основной шапки сайта на экран
     protected function get_header(){
         
         
@@ -197,6 +197,9 @@ abstract class ACore{
     
     //Метод вывода всех элементов страницы
     public function get_body(){
+        if($_POST){
+            $this->proc_post();
+        }
         echo $this->get_top_menu();
         echo $this->get_header();
         echo $this->get_content();

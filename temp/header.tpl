@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="views/css/style_footer.css">
     <link rel="stylesheet" type="text/css" href="views/css/style_content.css">
     <link rel="stylesheet" type="text/css" href="views/css/style_otherPages.css">
+    <script src="views/js/jquery-3.3.1.js"></script>
     <meta name='description' content="Магазин цветов Маркиза. Доставка подарков, букетов игрушек по Перми. Советы по уходу за растениями">
     <meta name='keywords' content="Цветы, подарки, доставка, Пермь, Маркиза">
     

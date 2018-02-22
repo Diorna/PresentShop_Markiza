@@ -4,19 +4,18 @@ class add_categ extends ACore_admin{
     protected function proc_post(){
         
         $name = $_POST['name'];
-        $description = $_POST['description'];
         
-        if(empty($name) || empty($description)){
-            exit("Не заполнены обязательные поля: название, описание");
+        if(empty($name)){
+            exit("Не заполнены обязательные поля: название");
         }
         
         
-        $query = "INSERT into t_menu (name_menu,text_menu) VALUES ('$name', '$description')";
+        $query = "INSERT into t_categ (categ) VALUES ('$name')";
         if(!mysql_query($query)){
             exit(mysql_error());
         }else{
-            $_SESSION['res'] = "Изменения сохранены. Добавить еще один пункт? ";
-            header("Location:?item=add_menu");
+            $_SESSION['res'] = "Изменения сохранены. Добавить еще один пункт";
+            header("Location:?item=add_categ");
             exit;
         }
         
@@ -31,11 +30,8 @@ class add_categ extends ACore_admin{
             unset($_SESSION['res']);
         }
         $HTML .= "<form action='' method='post'>
-            <p>Заголовок меню <br>
+            <p>Наименование категории <br>
                 <input type='text' name='name' style='width: 350px;'>
-            </p>
-            <p>Текст <br>
-                <textarea name='description' id='description' cols='60' rows='10'></textarea>
             </p>
             <p><input type='submit' name='add_button' value='Сохранить'>
             </p>

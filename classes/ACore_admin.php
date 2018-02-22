@@ -6,6 +6,11 @@ abstract class ACore_admin{
     
     //Конструктор класса, при создании объекта выполняет подключение к БД db_markiza
     public function __construct(){
+        
+        if(!$_SESSION['user']){
+            header("Location:?item=login");
+        }
+        
         $this->db = mysql_connect(HOST,USER,PASS);
         if(!$this->db){
             exit("Ошибка соединения с базой данных".mysql_error());
@@ -25,6 +30,9 @@ abstract class ACore_admin{
         $HTML .= "<a href='?item=admin'class='admin_menu'>Карточки товаров</a>";
         $HTML .= "<a href='?item=edit_menu'class='admin_menu'>Меню</a>";
         $HTML .= "<a href='?item=edit_category'class='admin_menu'>Категории товаров</a>";
+        
+        $HTML .= "<a href='?item=edit_subcateg' class='admin_menu'>Подкатегории товаров</a>";
+        
         $HTML .=   "</div>";
         $HTML .= "<div class='enter_registration'>
                             <div id='enter'>
@@ -128,5 +136,19 @@ abstract class ACore_admin{
         
         return $row;
     }
+    
+    protected function get_subcategory($id){
+        $query = "SELECT * from t_subcateg WHERE (id_subcateg = '".$id."')";
+        $result = mysql_query($query);
+        if(!$result){
+            exit(mysql_error());
+        }
+        $row = array();
+        $row = mysql_fetch_array($result, MYSQL_ASSOC);
+        
+        return $row;
+    }
+    
+    
 }
 ?>

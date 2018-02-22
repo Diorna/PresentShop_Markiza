@@ -1,6 +1,6 @@
 <?
 define('HOST', 'diploma');
-define('USER', 'root');
+define('USER', 'root_main');
 define('PASS', '');
 define('DB', 'db_markiza');
 ?>
